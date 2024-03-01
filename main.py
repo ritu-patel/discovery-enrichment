@@ -41,14 +41,7 @@ def extract_entities(text):
     # Prompt
     payload = {
         'model_id': 'ibm/granite-13b-instruct-v1',
-        'input': f'''Act as a webmaster who must extract structured information from emails. Read the below email and extract and categorize each entity. If no entity is found, output "None".
-
-Input:
-"Golden Bank is a competitor of Silver Bank in the US" said John Doe.
-
-Named Entities:
-Golden Bank: company, Silver Bank: company, US: country, John Doe: person
-
+        'input': f'''Act as a webmaster who must extract structured information from given data. Read the below data and extract and categorize each entity. If no entity is found, output "None".
 Input:
 {text}
 
